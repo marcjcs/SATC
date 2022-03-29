@@ -1,0 +1,98 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say thank you anytime the user says thank you
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Show current selected country
+  steps:
+  - intent: show_current_country
+  - action: utter_country
+
+- rule: Activate covid-19 cases form
+  steps:
+    - intent: check_total_cases_by_country   # intent that triggers form activation
+    - action: total_cases_form      # run the form
+    - active_loop: total_cases_form # this form is active
+
+- rule: Activate covid-19 recovered form
+  steps:
+    - intent: check_total_recovered_by_country   # intent that triggers form activation
+    - action: total_recovered_form      # run the form
+    - active_loop: total_recovered_form # this form is active
+
+- rule: Activate covid-19 active form
+  steps:
+    - intent: check_total_active_by_country   # intent that triggers form activation
+    - action: total_active_form      # run the form
+    - active_loop: total_active_form # this form is active
+
+- rule: Activate covid-19 deaths form
+  steps:
+    - intent: check_total_deaths_by_country   # intent that triggers form activation
+    - action: total_deaths_form      # run the form
+    - active_loop: total_deaths_form # this form is active
+
+- rule: Activate schedule covid-19 vaccination form
+  steps:
+    - intent: covid_vaccination   # intent that triggers form activation
+    - action: schedule_vaccination_form      # run the form
+    - active_loop: schedule_vaccination_form # this form is active
+
+- rule: Submit cases form
+  condition:
+  - active_loop: total_cases_form   # this form must be active
+  steps:
+    - action: total_cases_form      # run the form
+    - active_loop: null            # the form is no longer active because it has been filled
+    - action: action_check_total_cases_by_country         # action to take after the form is complete
+    - action: utter_total_cases   # action to take after the form is complete
+
+- rule: Submit schedule covid-19 vaccination form
+  condition:
+  - active_loop: schedule_vaccination_form   # this form must be active
+  steps:
+    - action: schedule_vaccination_form      # run the form
+    - active_loop: null            # the form is no longer active because it has been filled
+    - action: action_schedule_vaccination         # action to take after the form is complete
+    - action: utter_vaccination_result   # action to take after the form is complete
+
+- rule: Submit recovered form
+  condition:
+  - active_loop: total_recovered_form   # this form must be active
+  steps:
+    - action: total_recovered_form      # run the form
+    - active_loop: null            # the form is no longer active because it has been filled
+    - action: action_check_total_recovered_by_country         # action to take after the form is complete
+    - action: utter_total_recovered   # action to take after the form is complete
+
+- rule: Submit active form
+  condition:
+  - active_loop: total_active_form   # this form must be active
+  steps:
+    - action: total_active_form      # run the form
+    - active_loop: null            # the form is no longer active because it has been filled
+    - action: action_check_total_active_by_country         # action to take after the form is complete
+    - action: utter_total_active   # action to take after the form is complete
+
+- rule: Submit deaths form
+  condition:
+  - active_loop: total_deaths_form   # this form must be active
+  steps:
+    - action: total_deaths_form      # run the form
+    - active_loop: null            # the form is no longer active because it has been filled
+    - action: action_check_total_deaths_by_country         # action to take after the form is complete
+    - action: utter_total_deaths   # action to take after the form is complete

@@ -1,0 +1,166 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+    - Hey
+    - Hi bot
+    - Hey bot
+    - Hello
+    - Good morning
+    - hi again
+    - hi folks
+    - hi Mister
+    - hi pal!
+    - hi there
+    - greetings
+    - hello everybody
+    - hello is anybody there
+    - hello robot
+    - hallo
+    - heeey
+    - hi hi
+    - hey hey
+    - yo
+    - hola
+    - hi?
+    - hey bot!
+    - hello friend
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thanks
+    - thx
+    - ty
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: check_total_deaths_by_country
+  examples: |
+    - can you show me the number of covid-19 deaths in my country?
+    - show me the number of covid-19 deaths in my country
+    - covid-19 deaths in my country
+    - show me the number of covid-19 deaths
+    - number of covid-19 deaths in my country
+    - how many died in my country from covid-19
+    - what's the number of deaths by covid-19
+
+- intent: check_total_cases_by_country
+  examples: |
+    - can you show me the number of covid-19 cases in my country?
+    - show me the number of covid-19 cases in my country
+    - covid-19 cases in my country
+    - show me the number of covid-19 cases
+    - number of covid-19 cases in my country
+    - how many had covid-19
+    - what's the current situation in my country
+    - what's the number of cases by covid-19
+
+- intent: check_total_recovered_by_country
+  examples: |
+    - can you show me the number of covid-19 recovered in my country?
+    - show me the number of covid-19 recovered in my country
+    - covid-19 recovered in my country
+    - show me the number of covid-19 recovered
+    - number of covid-19 recovered in my country
+    - how many recovered from covid-19
+    - what's the number of recovered by covid-19
+
+- intent: check_total_active_by_country
+  examples: |
+    - can you show me the number of covid-19 active cases in my country?
+    - show me the number of covid-19 active cases in my country
+    - covid-19 active cases in my country
+    - show me the number of covid-19 active cases
+    - number of covid-19 active cases in my country
+    - how many have covid-19 right now
+    - what's the number of active cases by covid-19
+
+- intent: show_current_country
+  examples: |
+    - what country are you talking about
+    - which country is that
+    - what is my country now
+    - what is my current country
+    - what is the selected country
+
+- intent: inform
+  examples: |
+    - [Brazil](country)
+    - [USA](country)
+    - [Canada](country)
+    - [France](country)
+    - my country is [France](country)
+    - my country is actually [France](country)
+    - my country is [Canada](country)
+    - my country is actually [Canada](country)
+    - my country is [USA](country)
+    - my country is actually [USA](country)
+    - my country is [Barbados](country)
+    - my country is actually [Barbados](country)
+
+- intent: covid_vaccination
+  examples: |
+    - I want to schedule a covid19 vaccine
+    - schedule vaccine
+    - schedule covid19 vaccine
+    - I wish to schedule a covid19 vaccine
+    - i wanna get vaccinated
+    - i want to get vaccinated
+
+- intent: first_name
+  examples: |
+    -[Amery](name)
+    -[Bobbie](name)
+    -[Faulkner](name)
+    -[Leeland](name)
+    -[Regan](name)
+    -[Tammie](name)
+
+- regex: age
+  examples: |
+    - ^[1-9][0-9]?$|^100$
+
+- intent: age
+  examples: |
+    - my age is [123](age)
+    - i'm [12](age)
+
+- intent: comorbidities
+  examples: |
+    - [Yes](comorbidities)
+    - [No](comorbidities)
