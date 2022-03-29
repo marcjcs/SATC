@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SMEx1</string>
+    <string name="weekend_calculator">Weekend Calculator</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="height_m">Height (m)</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="calculate">Calculate</string>
+</resources>
