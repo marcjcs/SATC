@@ -1,0 +1,120 @@
+html {
+  font-family: 'Open Sans', sans-serif;  
+}
+
+.chat-box {
+  background-color: #6200EE;
+  border-radius: 10px;
+}
+
+.chat-box-header {
+  color: white;
+  padding: 5px 20px;
+}
+
+.chat-box-body {
+  padding: 10px;
+}
+
+.chat-box-body-msgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  color: #484848;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.chat-box-body-user-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 10px;
+}
+
+.chat-box-body-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 10px;
+}
+
+.chat-box-body-msg-value {
+  padding: 5px 15px;
+  margin-top: 4px;
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 7px;
+}
+
+.chat-box-body-input {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.chat-input {
+  display: flex;
+  align-self: stretch;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+/* CSS */
+.chat-input-btn {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #4BB543;
+  border-radius: 6px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 100%;
+  outline: none;
+  overflow: hidden;
+  padding: 10px 25px;
+  position: relative;
+  text-align: center;
+}
+
+.chat-input-btn:disabled {
+  cursor: default;
+}
+
+/* Pra fingir que existe acessibilidade no hover, mudar depois */
+.chat-input-btn:hover {
+  opacity: 0.95;
+}
+
+/* Helpers */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
