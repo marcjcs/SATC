@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+  <meta charset="UTF-8">
   <title>SW - 01</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,7 @@
         <h1>Atendimento on-line</h1>
       </div>
       <div class="chat-box-body">
-        <div class="chat-box-body-msgs">
+        <div id="chat-box-body-msgs">
           <div class="chat-box-body-msg">
             <div class="chat-box-body-msg-label">
               <i>Atendente diz:</i>
@@ -33,29 +34,14 @@
               Bla bla bla bla
             </div>
           </div>
-          <div class="chat-box-body-user-msg">
-            <div class="chat-box-body-msg-label">
-              <i>Você diz:</i>
-            </div>
-            <div class="chat-box-body-msg-value">
-              Bla bla bla bla
-            </div>
-          </div>
-          <div class="chat-box-body-user-msg">
-            <div class="chat-box-body-msg-label">
-              <i>Você diz:</i>
-            </div>
-            <div class="chat-box-body-msg-value">
-              Bla bla bla bla
-            </div>
-          </div>
         </div>
-        <div class="chat-box-body-input">
-          <input type="text" placeholder="Digite sua mensagem" class="chat-input" />
-          <button type="button" class="chat-input-btn">Enviar</button>
-        </div>
+        <form onsubmit="send(); return false;" class="chat-box-body-input">
+          <input type="text" value="" id="chat-input" placeholder="Digite sua mensagem" />
+          <button type="submit" class="chat-input-btn">Enviar</button>
+        </form>
       </div>
     </div>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>

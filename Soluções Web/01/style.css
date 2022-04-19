@@ -16,7 +16,7 @@ html {
   padding: 10px;
 }
 
-.chat-box-body-msgs {
+#chat-box-body-msgs {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,7 +55,7 @@ html {
   width: 100%;
 }
 
-.chat-input {
+#chat-input {
   display: flex;
   align-self: stretch;
   border: none;
